@@ -8,10 +8,59 @@ namespace ConstructorDemo
 {
     class Student
     {
-
         //-------------------------------------
         //Constructors
         //-------------------------------------
+
+        //default constructor
+        public Student() : this("Number Pending", "TBD", "TBD", -1, -1, -1, "Undeclared")
+        {
+        }
+
+        //single parameter constructor
+        public Student(string sID)
+            : this(sID, "TBD", "TBD", -1, -1, -1, "Undeclared")
+        {
+        }
+
+        //first overloaded constructor
+        public Student(string sID, string firstName, string lastName)
+            : this(sID, firstName, lastName, -1, -1, -1, "Undeclared")
+        {
+        }
+
+        //second overloaded constructor
+        public Student(string sID, string firstName, string lastName, int s1, int s2, int s3, string maj)
+        {
+            StudentNumber = sID;
+            FirstName = firstName;
+            LastName = lastName;
+            score1 = s1;
+            score2 = s2;
+            score3 = s3;
+            Major = maj;
+        }
+
+        //-------------------------------------
+        //Destructor
+        //-------------------------------------
+        //~Student()
+        //{
+        //    Console.WriteLine("Student {0} data no longer in memory!", StudentNumber);
+        //}
+
+        protected override void Finalize()
+        {
+            try
+            {
+                // Cleanup statements...
+            }
+            finally
+            {
+                base.Finalize();
+            }
+        }
+
 
 
         //-------------------------------------

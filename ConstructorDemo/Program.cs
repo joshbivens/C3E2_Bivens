@@ -10,10 +10,14 @@ namespace ConstructorDemo
     {
         static void Main(string[] args)
         {
-            Student myStudent = new Student();
-            myStudent.Major = "Computer Programming";
 
-            Console.WriteLine("My Major is {0}.", myStudent.Major);
+            Student myStudent = new Student("S001", "John", "Smith");
+
+            Console.WriteLine("Student Number: {0}", myStudent.StudentNumber);
+            Console.WriteLine("First Name: {0}", myStudent.FirstName);
+            Console.WriteLine("Last Namer: {0}", myStudent.LastName);
+            Console.WriteLine("Student Major: {0}", myStudent.Major);
+
         }
     }
 }
